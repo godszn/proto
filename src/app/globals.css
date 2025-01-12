@@ -15,7 +15,372 @@
 }
 
 body {
+    overflow-x: hidden; /* Disables horizontal scroll */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(../font/static/Quicksand-Medium.ttf);
+}
+
+body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand" !important;
+
+}
+
+.timeline-wrapper {
+  margin-top: 2rem;
+}
+
+.timeline-container {
+  margin: 5rem;
+}
+
+.timeline-content {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    position: relative;
+    width: 50%;
+  }
+
+  @media (max-width: 1115px) {
+    .timeline-content {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+  }
+  
+
+  .timeline-content h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+
+  .timeline-main {
+    padding: 2rem;
+    border-radius: .7rem;
+    width: 337px;
+  }
+
+.timeline-main h4 {
+  font-size: 20px;
+    margin-bottom: .7rem;
+    font-weight: 600;
+}
+
+.timeline-main ul {
+  list-style: disc;
+    padding-left: 2rem;
+}
+
+.timeline-main li {
+  padding-left: 1rem;
+}
+
+.left-arrow1 {
+  height: 0;
+  width: 0;
+  bottom: 18px;
+  right: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid black;
+  rotate: -90deg;
+}
+
+.left-arrow2 {
+  height: 0;
+  width: 0;
+  bottom: -5px;
+  right: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid black;
+  rotate: -90deg;
+}
+
+.left-arrow3 {
+  height: 0;
+  width: 0;
+  bottom: 19px;
+  right: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid black;
+  rotate: -90deg;
+}
+
+.right-arrow1 {
+  height: 0;
+  width: 0;
+  bottom: -14px;
+  left: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #808080;
+  rotate: -90deg;
+}
+
+.right-arrow2 {
+  height: 0;
+  width: 0;
+  bottom: -13px;
+  left: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #808080;
+  rotate: -90deg;
+}
+
+.right-arrow3 {
+  height: 0;
+  width: 0;
+  bottom: 19px;
+  left: 31px;
+  z-index: 1;
+  border-top: 27px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #808080;
+  rotate: -90deg;
+}
+
+@media (max-width: 427px) {
+  .timeline-main{
+    padding: 1rem;
+  }
+
+  .timeline-main ul {
+    font-size: 13px;
+  }
+
+  .line {
+    left: -4px;
+  }
+
+  .pol {
+    width: 100%;
+  }
+  
+  .poll {
+    width: 100%;
+  }
+
+  .service-wrapper {
+    padding: 2rem;
+  }
+
+  .contact-wrapper {
+    padding: 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-text {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 24px;  
+  }
+
+  .contact-widget {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info-wrapper {
+    flex-direction: column;
+    gap: 1rem; 
+    margin-top: 1.5rem;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 1.5rem;  
+    box-shadow: 1px 2px 10px #00000040;
+    border-radius: .4rem;
+    margin-top: 1.5rem;
+  }
+
+  .personal .nameform {
+    flex-direction: column;
+  }
+
+  .nameform input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .company textarea {
+    width: 100%;
+  }
+
+  .contact-infos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; 
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-details div {
+    margin-bottom: 1rem;
+  }
+
+  .widget {
+    width: 50px;
+    height: 20px;
+  }
+
+  .contact-info-wrapper .contact-details h1 {
+    font-size: 18px;  
+  }
+
+  .contact-info-wrapper .contact-details p {
+    font-size: 14px;  
+  }
+
+}
+@media (max-width: 798px) {
+    .contact-wrapper {
+      padding: 3rem;
+    }
+
+    .contact-content {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .contact-text {
+      width: 100%;
+      text-align: center;
+      padding: 2rem;
+      font-size: 30px;
+    }
+
+    .contact-widget {
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .contact-info-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-form {
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 1px 2px 10px #00000040;
+      border-radius: .4rem;
+      margin-top: 2rem;
+    }
+
+    .personal .nameform {
+      flex-direction: column;
+    }
+
+    .nameform input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .company textarea {
+      width: 100%;
+    }
+
+    .contact-infos {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .contact-details div {
+      margin-bottom: 1rem;
+    }
+
+    .widget {
+      width: 60px;
+      height: 20px;
+    }
+  .timeline-container section{
+    flex-direction: column !important;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-main {
+    width: 100%;
+  }
+
+  .line {
+    left: 0%;
+    top: 0;
+    height: 100%;
+  }
+
+  .timeline-wrapper {
+    justify-content: start;
+    width: 100%;
+  }
+
+  .timeline-container {
+    margin: 0;
+  }
+
+  /* Remove arrow classes, if they still exist in your codebase */
+  .left-arrow1,
+  .left-arrow2,
+  .left-arrow3,
+  .right-arrow1,
+  .right-arrow2,
+  .right-arrow3 {
+    display: none;
+  }
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid lightgray; /* Light grey border */
+  border-radius: 50%; /* Circle shape */
+  color: lightgray; /* Icon color */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #f2f2f2; /* Light grey background */
+  color: black; /* Change icon color on hover */
+}
+
+.icon-wrapper i {
+  font-size: 16px; /* Adjust icon size */
 }
