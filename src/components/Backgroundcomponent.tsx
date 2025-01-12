@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect } from 'react';
-import Image from 'next/image';
 import bg from '../assets/bg1.jpg';
 import AOS from 'aos';  // Import AOS
 import 'aos/dist/aos.css';  // Import AOS CSS

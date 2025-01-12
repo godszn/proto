@@ -53,7 +53,7 @@ const Overview = () => {
                             data-aos-delay="600"
                         >
                             <div>
-                                '[Icon]'
+                                [Icon]
                             </div>
                             <div>
                                 <h4 className='text-black text-lg font-semibold'>
